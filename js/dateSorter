@@ -1,0 +1,18 @@
+const arrayList = [
+    { id: 32, name: 'Jane', dob:'2015-09-11' },
+    { id: 343, name: 'Jane', dob:'2000-01-10' },
+    { id: 43, name: 'Jane', dob:'2022-10-11'},
+    { id: 43, name: 'Jane', dob:'2020-06-07'}
+    
+    ]
+// for sorting
+const byDate = (a, b) => {
+    return new Date(a.dob).valueOf() - new Date(b.dob).valueOf()
+}
+sortedDate = arrayList.sort(byDate)
+sortedDate = Object.values(sortedDate), 
+earliest = sortedDate[0]
+oldest =  sortedDate[sortedDate.length -1]
+
+console.log(earliest)
+console.log(oldest)
